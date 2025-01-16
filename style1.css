@@ -4,6 +4,7 @@ body {
     padding: 0;
     margin: 0;
     color: #f0f0f0;
+
 }
 
 h1 {
@@ -12,34 +13,6 @@ h1 {
     margin: 0;
     color: #ffffff;
 }
-
-h2 {
-    font-size: 24px;
-    margin: 0;
-    padding: 0;
-    color: #ffffff;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    color: #e0e0e0;
-}
-
-
-.navbar {
-    padding: 0rem 1rem;
-    background-color: #333232;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
 li {
     float: left;
 }
@@ -59,42 +32,6 @@ li a:hover:not(.active) {
 .active {
     background-color: #000000;
 }
-
-
-.row {
-    display: flex; 
-    justify-content: center; 
-    align-items: flex-start; 
-    flex-wrap: wrap; 
-    gap: 10px; 
-    margin: 50px 0; 
-}
-
-.card {
-    width: 200px; 
-    margin: 10px;
-    padding: 15px;
-    background-color: #222; 
-    border: 1px solid #444; 
-    border-radius: 8px;
-    color: #f0f0f0; 
-}
-
-.card:hover {
-    background-color: #ab0000; 
-}
-
-.card-link {
-    text-decoration: none; 
-    color: inherit; 
-  }
-
-.card-link:hover .card {
-    transform: scale(1.05); 
-    transition: transform 0.3s ease;
-}
-
-
 .footer {
     position: relative;
     bottom: 0;
@@ -131,16 +68,75 @@ li a:hover:not(.active) {
     color: #ffffff; 
 }
 
-.grande {
-    font-size: 15.7px; 
-}
-.card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.bio-container {
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-in-out forwards;
   }
   
-  .card-hover:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
+
+.bio-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.decor-line {
+    height: 2px;
+    width: 80%;
+    background-color: #92a4ff;
+    margin: 20px auto;
+}
+.progress-section {
+    margin-top: 20px;
+  }
   
+  .progress-bar {
+    animation: growProgress 2s ease-in-out forwards;
+  }
+  
+  @keyframes growProgress {
+    from {
+      width: 0;
+    }
+    to {
+      width: 80%; 
+    }
+  }
+
+  .floating-container {
+    text-align: center; 
+    margin-top: 50px; 
+  }
+  
+  .floating-image {
+    width: 150px;
+    height: auto; 
+    
+    
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0); 
+    }
+    50% {
+      transform: translateY(-20px); 
+    }
+  }
+
