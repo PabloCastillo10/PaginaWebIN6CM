@@ -10,17 +10,17 @@
     color: #007bff; 
     background-color: #f1f1f1;
 }
-.text-animation {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInText 5s ease-in-out forwards;
+.container {
+  background: linear-gradient(120deg, #012df1, #90e0ef, #48cae4);
+  background-size: 400% 400%;
+  animation: gradientBackground 10s ease infinite;
 }
-@keyframes fadeInText {
-    to {
-      opacity: 1;
-      transform: translateY(0); 
-    }
-  }
+
+@keyframes gradientBackground {
+  0% { background-position: 100% 0; }
+  50% { background-position: 0 100%; }
+  100% { background-position: 100% 0; }
+}
   .background-section {
     position: relative;
     height: 50vh;
@@ -30,8 +30,17 @@
     background-attachment: scroll;
 }
 .carousel-container {
-    background-color: #002855;
-    padding: 20px 0;
+  background: linear-gradient(45deg, rgba(0, 40, 85, 0.8), rgba(0, 40, 85, 0.6));
+  padding: 40px 0;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); 
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .carousel-item1 img {
     max-height: 80px;
@@ -42,18 +51,14 @@
     padding: 20px;
     border-radius: 10px;
   }
-
 .bg-dark {
     background-color: #002869;
     color: #20006f;
   }
-  
   .beneficiados-box {
     border-radius: 5px;
     text-align: center;
   }
-  
-  
   .blog-box img {
     border-radius: 5px;
     margin-bottom: 10px;
@@ -63,22 +68,70 @@
     font-size: 14px;
     color: #FFFFFF;
   }
-  
-
   .footer-bottom {
     border-top: 1px solid #FFFFFF;
     padding-top: 20px;
     font-size: 14px;
   }
-  
   .footer-bottom .social-links a {
     margin: 0 10px;
     color: #FFFFFF;
   }
-  
   .footer-bottom .social-links img {
     width: 20px;
     height: 20px;
     vertical-align: middle;
+  }
+  #toggleDarkMode {
+    background-color: transparent;
+    color: black;
+    border: 2px solid aqua;
+    padding: 10px 40px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #toggleDarkMode:hover {
+    transform: scale(1.1);
+  }
+  
+  #toggleDarkMode.dark {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-color: white;
+  }
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border: 2px solid aqua;
+    border-radius: 15px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar .nav-link {
+    color: #007bff !important;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #0056b3 !important;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animacion {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
   }
   

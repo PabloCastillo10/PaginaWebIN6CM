@@ -1,2 +1,3 @@
 # PaginaWebIN6CM
 Pagina Web Taller
+Pues le añadi de nuevo o rediseñe la pagina con la funcion de ponerlo en modo oscuro siento que le falta eso porque pues para mi gusto mas asi que este en oscuro y no soy el unico. Ammm tambien le puse la decoracion o el fondo de los containers ese fondo que cambia de color pues para que se vea mas cool y mas decorado pues solo esas ideas se me ocurrieron y le puse links a las imagenes.
